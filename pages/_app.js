@@ -5,6 +5,7 @@ import '@fontsource/roboto';
 const theme = extendTheme({
   colors: {
     bg: '#42367c',
+    pink: '#31254b',
   },
   fonts: {
     heading: "'Roboto', sans-serif",
