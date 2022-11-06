@@ -7,14 +7,11 @@ import {
   AccordionIcon,
 } from '@chakra-ui/react';
 
-
 export default function Home() {
   return (
     <>
-      <Box maxW="1440px" mx="auto" w="100%" bg="bg" minH="100vh">
-
-        
-        <Box id="header" px="30px" w="100%" bg="#513966" py="10px" color="white">
+      <Box maxW={{ base: 'auto', md: '1440px' }} mx="auto" w="100%" bg="bg" minH="100vh">
+        <Box mb="30px" id="header" px="30px" w="100%" bg="#513966" py="10px" color="white">
           <Flex w="100%" alignItems="center" justifyContent="space-between">
             <Box>
               <Image w="200px" alt="logo" src="/images/logo.png" />
@@ -28,9 +25,21 @@ export default function Home() {
           </Flex>
         </Box>
 
-
-        <Flex mb="70px" py="10px" w="100%" alignItems="center" justifyContent="center">
-          <Box color="white" w="450px">
+        <Flex
+          flexDirection={{ base: 'column', md: 'row' }}
+          mb="70px"
+          py="10px"
+          w="100%"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Flex
+            flexDirection="column"
+            mb={{ base: '20px', md: '0' }}
+            alignItems={{ base: 'center', md: 'flex-start' }}
+            color="white"
+            w={{ base: 'auto', md: '450px' }}
+          >
             <Heading mb="20px" lineHeight="45px">
               Private, fast, secure and easy to use web3 mailing system
             </Heading>
@@ -39,7 +48,7 @@ export default function Home() {
             <Box as="button" w="170px" h="50px" bg="white" borderRadius="5px">
               <Text color="black">Connect</Text>
             </Box>
-          </Box>
+          </Flex>
 
           <Box px="10px">
             <Image borderRadius="5px" w="600px" alt="1" src="/images/1.jpg" />
@@ -64,26 +73,46 @@ export default function Home() {
         </Flex>
 
         <Box w="100%" bg="pink">
-          <Flex py="90px" w="100%" alignItems="center" justifyContent="center">
-            <Box color="white" w="450px">
-              <Heading mb="20px" lineHeight="45px">
-                Private, fast, secure and easy to use web3 mailing system
-              </Heading>
-              <Text mb="20px">Welcome to the web3 mailing system, the Bitmail</Text>
-
-              <Box as="button" w="170px" h="50px" bg="white" borderRadius="5px">
-                <Text color="black">Connect</Text>
-              </Box>
-            </Box>
-
+          <Flex
+            flexDirection={{ base: 'column', md: 'row' }}
+            py="90px"
+            w="100%"
+            alignItems="center"
+            justifyContent="center"
+          >
             <Box px="10px">
               <Image borderRadius="5px" w="600px" alt="1" src="/images/1.jpg" />
             </Box>
+
+            <Flex
+              flexDirection="column"
+              alignItems={{ base: 'center', md: 'flex-end' }}
+              color="white"
+              w={{ base: 'auto', md: '450px' }}
+            >
+              <Heading textAlign={{ base: 'center', md: 'right' }} mb="20px" lineHeight="45px">
+                Private, fast, secure and easy to use web3 mailing system Private, fast, secure and
+                easy to use web3 mailing system
+              </Heading>
+
+              <Text mb="20px">Welcome to the web3 mailing system, the Bitmail</Text>
+            </Flex>
           </Flex>
         </Box>
 
-        <Flex py="90px" w="100%" alignItems="center" justifyContent="center">
-          <Box color="white" w="450px">
+        <Flex
+          flexDirection={{ base: 'column', md: 'row' }}
+          py="90px"
+          w="100%"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Flex
+            alignItems={{ base: 'center', md: 'flex-start' }}
+            flexDirection="column"
+            color="white"
+            w={{ base: 'auto', md: '450px' }}
+          >
             <Heading mb="20px" lineHeight="45px">
               Private, fast, secure and easy to use web3 mailing system
             </Heading>
@@ -92,7 +121,7 @@ export default function Home() {
             <Box as="button" w="170px" h="50px" bg="white" borderRadius="5px">
               <Text color="black">Connect</Text>
             </Box>
-          </Box>
+          </Flex>
 
           <Box px="10px">
             <Image borderRadius="5px" w="600px" alt="1" src="/images/1.jpg" />
