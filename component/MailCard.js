@@ -3,15 +3,15 @@ import { Box, Heading, Link, Text, Flex, Image } from '@chakra-ui/react';
 import { Checkbox } from '@chakra-ui/react'
 export default function mailCard() {
   return (
-    <Box bg="grey" p="20px">
-        <Flex alignItems="center" justifyContent="center">
+    <Box py="10px" w="500px" borderWidth="1px" borderColor="#3e3e3e" bg="#2c2c2c" px="30px">
+        <Flex  alignItems="center" justifyContent="center">
         <Checkbox ></Checkbox>
         <Image src="/images/notification.svg" w="30px" />
         <Flex w="600px" alignItems="center" justifyContent="space-between">
-            <Text fontWeight="bold">
+            <Text color="white" fontSize="10px">
                 Duolingo
             </Text>
-            <Text fontWeight="bold">
+            <Text color="white" fontSize="10px" >
                 2.48PM
             </Text>
         </Flex>
@@ -20,7 +20,7 @@ export default function mailCard() {
        
         <Image src="/images/Starred.svg" w="30px" />
         <Flex w="600px" alignItems="center" >
-            <Text fontWeight="bold">
+            <Text color="white" fontSize="10px" >
                 We missed you! Our top tip to get you back on track
             </Text>
             
@@ -30,7 +30,7 @@ export default function mailCard() {
        
        <Image src="/images/Important.svg" w="30px" />
        <Flex w="600px" alignItems="center" >
-           <Text  fontWeight="bold">
+           <Text color="white" fontSize="10px" >
                Make your learning 3X more effective
            </Text>
            
