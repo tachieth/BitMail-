@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Heading, Link, Text, Flex, Image } from "@chakra-ui/react";
 import MailCard from "../component/MailCard";
+
 import { Checkbox } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -105,13 +106,28 @@ export default function app() {
             </Text>
           </Flex>
         </Flex>
-        <Flex mb="10px" alignItems="center" mt="10px" ml="25px">
-        <AiOutlineMail color="#6e39d3" />
-        <Text ml="10px" fontSize="12px" color="#6e39d3">
-          Inbox
-        </Text>
-        </Flex>
-        <MailCard/>
+        <Box>
+          <Flex mb="10px" alignItems="center" mt="10px" ml="25px">
+            <AiOutlineMail color="#6e39d3" />
+            <Text ml="10px" fontSize="12px" color="#6e39d3">
+              Inbox
+            </Text>
+          </Flex>
+          <Flex>
+            <Box>
+              <MailCard />
+              <MailCard read />
+              <MailCard />
+              <MailCard />
+              <MailCard read />
+              <MailCard read />
+              <MailCard />
+            </Box>
+            <Box>
+              
+            </Box>
+          </Flex>
+        </Box>
       </Box>
       <Box ml="10px" mt="70px">
         <Box>
