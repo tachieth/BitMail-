@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Heading, Link, Text, Flex, Image } from "@chakra-ui/react";
 import { Checkbox } from "@chakra-ui/react";
-export default function MailCard({ read = false }) {
+export default function MailCard({ read = false, onToggle }) {
   return (
     <Box 
     as="button"
@@ -11,6 +11,7 @@ export default function MailCard({ read = false }) {
       borderColor="#3e3e3e"
       bg={read ? "#1f1f1f" : "#2c2c2c"}
       px="20px"
+      onClick={onToggle}
     >
       <Flex position="relative" alignItems="flex-start">
         <Checkbox size='sm'></Checkbox>

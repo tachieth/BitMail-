@@ -1,12 +1,14 @@
-import React from "react";
-import { Box, Heading,Input, Link, Text, Flex, Image } from "@chakra-ui/react";
+import React, {useState} from "react";
+import { Box, Heading,Input, Link, Text, Flex, Image, useDisclosure } from "@chakra-ui/react";
 import MailCard from "../component/MailCard";
 import ReadMailSection from "../component/ReadMailSection";
-
 import { Checkbox } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
+import ComposeModal from "../component/ComposeModal";
 
-export default function app() {
+export default function Home() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showRead, setShowRead] = useState(false)
   return (
     <>
       <Flex
@@ -17,6 +19,7 @@ export default function app() {
         bg="black"
         w="100%"
         id="header"
+        color="white"
       >
         <Flex alignItems="center" justifyContent="center">
           <Box>
@@ -29,7 +32,7 @@ export default function app() {
 
         <Flex alignItems="center" justifyContent="center">
           <Box bg="bg" w="900px">
-            <Input placeholder="Basic usage" />
+            <Input placeholder="Search" />
           </Box>
           <Box px="10px">
             <Image w="10px" alt="3dot" src="/images/threedotv.png" />
@@ -44,7 +47,7 @@ export default function app() {
       </Flex>
 
       <Flex minH="100vh" w="100%" bg="black">
-        <Box mt="30px" p="40px" w="300px" bg="black">
+        <Box  px="40px" w="300px" bg="black">
           <Box>
             <Flex
               alignItems="center"
@@ -123,7 +126,7 @@ export default function app() {
             </Box>
           </Box>
         </Box>
-        <Box borderRadius="15px" mt="70px" mb="20px" w="1000px" bg="#2c2c2c">
+        <Box borderRadius="15px"  mb="20px" w="1000px" bg="#2c2c2c">
           <Flex alignItems="center" justifyContent="space-between" px="25px" pt="10px">
             <Flex>
               <Checkbox />
@@ -146,21 +149,21 @@ export default function app() {
             </Flex>
             <Flex>
               <Box>
-                <MailCard />
-                <MailCard read />
-                <MailCard />
-                <MailCard />
-                <MailCard read />
-                <MailCard read />
-                <MailCard />
+                <MailCard onToggle={() => setShowRead(!showRead)} />
+                <MailCard onToggle={() => setShowRead(!showRead)}  read />
+                <MailCard onToggle={() => setShowRead(!showRead)}  />
+                <MailCard onToggle={() => setShowRead(!showRead)}  />
+                <MailCard onToggle={() => setShowRead(!showRead)}  read />
+                <MailCard onToggle={() => setShowRead(!showRead)}  read />
+                <MailCard onToggle={() => setShowRead(!showRead)}  />
               </Box>
               <Box>
-                <ReadMailSection />
+               { showRead &&  <ReadMailSection />}
               </Box>
             </Flex>
           </Box>
         </Box>
-        <Box ml="10px" mt="70px">
+        <Box  ml="10px" >
           <Box>
             <Image src="/images/Calendar.svg" w="35px" />
           </Box>
