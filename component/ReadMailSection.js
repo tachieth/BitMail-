@@ -53,7 +53,7 @@ export default function MailCard() {
           Hey,
           <br />
           Since the last time we met, i have been working on the V2 roadmap.
-          Nice to meet you! <br />
+          Nice to meet you!! <br />
           Lets arrange a meeting at 11pm.
         </Text>
         <Text mt="20px" mb="15px" ml="20px" fontSize="10px" color="#bebebe">
