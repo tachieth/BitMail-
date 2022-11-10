@@ -1,13 +1,14 @@
 import React from "react";
 import { Box, Heading, Link, Text, Flex, Image } from "@chakra-ui/react";
 import MailCard from "../component/MailCard";
+import ReadMailSection from "../component/ReadMailSection";
 
 import { Checkbox } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
 
 export default function app() {
   return (
-    <Flex h="100vh" bg="black">
+    <Flex minH="100vh" w="100%"  bg="black">
       <Box mt="30px" p="40px" w="300px" bg="black">
         <Box>
           <Flex
@@ -124,7 +125,7 @@ export default function app() {
               <MailCard />
             </Box>
             <Box>
-              
+              <ReadMailSection/>
             </Box>
           </Flex>
         </Box>
