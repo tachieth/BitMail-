@@ -37,9 +37,9 @@ export default function Home() {
             >
               <Flex>
                 <Checkbox />
-                <Image src="/images/Checkbox Tick.svg" w="35px" />
-                <Image src="/images/Refresh.svg" w="35px" />
-                <Image src="/images/3 Dots Vertical.svg" w="35px" />
+                <Image src="/images/Checkbox Tick.svg" w="35px" alt="checkbox" />
+                <Image src="/images/Refresh.svg" w="35px" alt="refresh" />
+                <Image src="/images/3 Dots Vertical.svg" w="35px" alt="3dot" />
               </Flex>
               <Flex>
                 <Text fontSize="12px" color="white">
@@ -70,13 +70,13 @@ export default function Home() {
           </Box>
           <Box ml="10px">
             <Box>
-              <Image src="/images/Calendar.svg" w="35px" />
+              <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
             <Box>
-              <Image src="/images/Task.svg" w="35px" />
+              <Image src="/images/Task.svg" w="35px" alt="task" />
             </Box>
             <Box>
-              <Image src="/images/Calendar.svg" w="35px" />
+              <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
           </Box>
         </Flex>

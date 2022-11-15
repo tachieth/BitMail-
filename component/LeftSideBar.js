@@ -24,7 +24,7 @@ export default function LeftSideBar({onOpen}) {
         as="button"
         onClick={onOpen}
       >
-        <Image src="/images/pencil.png" w="25px" />
+        <Image src="/images/pencil.png" w="25px" alt="pencil" />
         <Text ml="15px" color="white">
           Compose
         </Text>
@@ -42,49 +42,49 @@ export default function LeftSideBar({onOpen}) {
           </Flex>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Sent.svg" w="25px" />
+          <Image mr="10px" src="/images/Sent.svg" w="25px" alt="sent" />
           <Text fontSize="14px" color="white">
             Sent
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Starred.svg" w="25px" />
+          <Image mr="10px" src="/images/Starred.svg" w="25px" alt="starred" />
           <Text fontSize="14px" color="white">
             Starred
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Less.svg" w="25px" />
+          <Image mr="10px" src="/images/Less.svg" w="25px" alt="less" />
           <Text fontSize="14px" color="white">
             Less
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Important.svg" w="25px" />
+          <Image mr="10px" src="/images/Important.svg" w="25px" alt="imp" />
           <Text fontSize="14px" color="white">
             Important
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Archive.svg" w="25px" />
+          <Image mr="10px" src="/images/Archive.svg" w="25px" alt="archieve" />
           <Text fontSize="14px" color="white">
             Archive
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Trash.svg" w="25px" />
+          <Image mr="10px" src="/images/Trash.svg" w="25px" alt="trash" />
           <Text fontSize="14px" color="white">
             Trash
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Draft.svg" w="25px" />
+          <Image mr="10px" src="/images/Draft.svg" w="25px" alt="draft" />
           <Text fontSize="14px" color="white">
             Drafts
           </Text>
         </Flex>
         <Flex as="button" ml="20px">
-          <Image mr="10px" src="/images/Spam.svg" w="25px" />
+          <Image mr="10px" src="/images/Spam.svg" w="25px" alt="spam" />
           <Text fontSize="14px" color="white">
             Spam
           </Text>

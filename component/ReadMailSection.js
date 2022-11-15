@@ -8,13 +8,13 @@ export default function MailCard() {
     <Box w="500px" borderTopWidth="1px" borderColor="#3e3e3e">
       <Flex mt="10px">
         <Flex ml="20px" alignItems="center" as="button">
-          <Image src="/images/Archive.svg" w="30px" />
+          <Image src="/images/Archive.svg" w="30px" alt="archieve" />
           <Text mt="3px" fontSize="11px" color="white">
             Archive
           </Text>
         </Flex>
         <Flex ml="20px" alignItems="center" as="button">
-          <Image src="/images/Trash.svg" w="30px" />
+          <Image src="/images/Trash.svg" w="30px" alt="trash" />
           <Text mt="3px" fontSize="11px" color="white">
             Delete
           </Text>
@@ -27,7 +27,7 @@ export default function MailCard() {
           </Text>
         </Flex>
         <Flex ml="20px" alignItems="center" as="button">
-          <Image src="/images/Spam.svg" w="30px" />
+          <Image src="/images/Spam.svg" w="30px" alt="spam" />
           <Text mt="3px" fontSize="11px" color="white">
             Mark spam
           </Text>
@@ -82,15 +82,15 @@ export default function MailCard() {
               <Text ml="10px" color="white" fontSize="10px">
                 Send
               </Text>
-              <Image src="/images/Checkbox Tick.svg" w="15px" />
+              <Image src="/images/Checkbox Tick.svg" w="15px" alt="checkbox" />
             </Flex>
-            <Image ml="20px" mr="10px" src="/images/A.png" w="15px" />
-            <Image mr="10px" src="/images/insert.png" w="20px" />
-            <Image mr="10px" src="/images/insert_.png" w="20px" />
-            <Image mr="10px" src="/images/smile.png" w="15px" />
-            <Image mr="10px" src="/images/picture.png" w="15px" />
-            <Image mr="10px" src="/images/lock.png" w="15px" />
-            <Image  src="/images/3_dots.png" w="12px" />
+            <Image ml="20px" mr="10px" src="/images/A.png" w="15px" alt="A" />
+            <Image mr="10px" src="/images/insert.png" w="20px" alt="insert" />
+            <Image mr="10px" src="/images/insert_.png" w="20px" alt="insert_" />
+            <Image mr="10px" src="/images/smile.png" w="15px" alt="smile" />
+            <Image mr="10px" src="/images/picture.png" w="15px" alt="picture"/>
+            <Image mr="10px" src="/images/lock.png" w="15px"  alt="lock"/>
+            <Image  src="/images/3_dots.png" w="12px" alt="3dot" />
           </Flex>
         </Flex>
       </Flex>
