@@ -11,14 +11,28 @@ export default function Home() {
   return (
     <>
       <Box maxW={{ base: 'auto', md: '1440px' }} mx="auto" w="100%" bg="bg" minH="100vh">
-        <Box mb="30px" id="header" px="30px" w="100%" bg="#513966" py="10px" color="white">
+        <Box
+          mb="30px"
+          id="header"
+          px={{ base: '10px', md: '30px' }}
+          w="100%"
+          bg="#513966"
+          py="10px"
+          color="white"
+        >
           <Flex w="100%" alignItems="center" justifyContent="space-between">
             <Box>
-              <Image w="200px" alt="logo" src="/images/logo.png" />
+              <Image w={{ base: '150px', md: '200px' }} alt="logo" src="/images/logo.png" />
             </Box>
 
             <Box color="white">
-              <Box as="button" w="170px" h="50px" bg="white" borderRadius="5px">
+              <Box
+                as="button"
+                w={{ base: '150px', md: '170px' }}
+                h={{ base: '50px', md: '50px' }}
+                bg="white"
+                borderRadius="5px"
+              >
                 <Text color="black">Connect</Text>
               </Box>
             </Box>
@@ -63,7 +77,7 @@ export default function Home() {
           alignItems="center"
           justifyContent="center"
         >
-          <Box mb="20px">
+          <Box px={{ base: '10px', md: '0' }} mb="20px">
             <Image borderRadius="5px" w="700px" alt="1" src="/images/1.jpg" />
           </Box>
           <Box textAlign="center" color="white">
@@ -80,7 +94,7 @@ export default function Home() {
             alignItems="center"
             justifyContent="center"
           >
-            <Box px="10px">
+            <Box mb={{ base: '20px', md: '0' }} px="10px">
               <Image borderRadius="5px" w="600px" alt="1" src="/images/1.jpg" />
             </Box>
 
@@ -88,6 +102,7 @@ export default function Home() {
               flexDirection="column"
               alignItems={{ base: 'center', md: 'flex-end' }}
               color="white"
+              px={{ base: '10px', md: '0' }}
               w={{ base: 'auto', md: '450px' }}
             >
               <Heading textAlign={{ base: 'center', md: 'right' }} mb="20px" lineHeight="45px">
@@ -111,6 +126,7 @@ export default function Home() {
             alignItems={{ base: 'center', md: 'flex-start' }}
             flexDirection="column"
             color="white"
+           
             w={{ base: 'auto', md: '450px' }}
           >
             <Heading mb="20px" lineHeight="45px">
@@ -118,7 +134,14 @@ export default function Home() {
             </Heading>
             <Text mb="20px">Welcome to the web3 mailing system, the Bitmail</Text>
 
-            <Box as="button" w="170px" h="50px" bg="white" borderRadius="5px">
+            <Box
+              mb={{ base: '20px', md: '0' }}
+              as="button"
+              w="170px"
+              h="50px"
+              bg="white"
+              borderRadius="5px"
+            >
               <Text color="black">Connect</Text>
             </Box>
           </Flex>
@@ -128,7 +151,7 @@ export default function Home() {
           </Box>
         </Flex>
 
-        <Box py="90px" w="100%" bg="pink">
+        <Box px={{ base: '20px', md: '0' }} py="90px" w="100%" bg="pink">
           <Box maxW="1300px" mx="auto" w="100%">
             <Accordion color="white" defaultIndex={[0]} allowMultiple>
               <AccordionItem py="10px" borderWidth="0px">

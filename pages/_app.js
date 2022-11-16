@@ -9,6 +9,8 @@ const theme = extendTheme({
     bg: '#42367c',
     pink: '#31254b',
     bg: '#2c2c2c',
+    text: '#787878',
+    blue: '#7e3ad9',
   },
   fonts: {
     heading: "'Roboto', sans-serif",

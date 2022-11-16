@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Box,
   Heading,
@@ -7,34 +7,42 @@ import {
   Text,
   Flex,
   Image,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
   useDisclosure,
-} from "@chakra-ui/react";
-import MailCard from "../component/MailCard";
-import ReadMailSection from "../component/ReadMailSection";
-import Header from "../component/Header";
-import LeftSideBar from "../component/LeftSideBar";
-import { Checkbox } from "@chakra-ui/react";
-import { AiOutlineMail } from "react-icons/ai";
-import ComposeModal from "../component/ComposeModal";
+  Button,
+} from '@chakra-ui/react';
+import MailCard from '../component/MailCard';
+import CalendarCard from '../component/CalendarCard';
+import ReadMailSection from '../component/ReadMailSection';
+import Header from '../component/Header';
+import LeftSideBar from '../component/LeftSideBar';
+import { Checkbox } from '@chakra-ui/react';
+import { ChevronDownIcon } from '@chakra-ui/Icons';
+import { AiOutlineMail } from 'react-icons/ai';
+import ComposeModal from '../component/ComposeModal';
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showRead, setShowRead] = useState(false);
+  const [value, onChange] = useState(new Date());
+
   return (
     <Flex>
       <Box>
         <Header />
         <Flex minH="100vh" w="100%" bg="black">
-          <Box px="40px" w="300px" bg="black">
+          <Box px="40px" maxW="300px" bg="black">
             <LeftSideBar onOpen={onOpen} />
           </Box>
           <Box borderRadius="15px" mb="20px" w="1000px" bg="#2c2c2c">
-            <Flex
-              alignItems="center"
-              justifyContent="space-between"
-              px="25px"
-              pt="10px"
-            >
+            <Flex alignItems="center" justifyContent="space-between" px="25px" pt="10px">
               <Flex>
                 <Checkbox />
                 <Image src="/images/Checkbox Tick.svg" w="35px" alt="checkbox" />
@@ -82,6 +90,9 @@ export default function Home() {
         </Flex>
         <ComposeModal isOpen={isOpen} onClose={onClose} />
       </Box>
+
+  
+
       {/* SideBar */}
     </Flex>
   );
