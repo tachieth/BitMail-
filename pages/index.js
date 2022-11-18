@@ -9,14 +9,13 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <Box bg="#513966">
       <Box maxW={{ base: 'auto', md: '1440px' }} mx="auto" w="100%" bg="bg" minH="100vh">
         <Box
           mb="30px"
           id="header"
           px={{ base: '10px', md: '30px' }}
           w="100%"
-          bg="#513966"
           py="10px"
           color="white"
         >
@@ -126,7 +125,6 @@ export default function Home() {
             alignItems={{ base: 'center', md: 'flex-start' }}
             flexDirection="column"
             color="white"
-           
             w={{ base: 'auto', md: '450px' }}
           >
             <Heading mb="20px" lineHeight="45px">
@@ -289,6 +287,6 @@ export default function Home() {
           </Flex>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 }

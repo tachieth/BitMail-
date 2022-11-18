@@ -1,30 +1,16 @@
 import React, { useState } from 'react';
 import {
   Box,
-  Heading,
-  Input,
-  Link,
   Text,
   Flex,
   Image,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
+  Checkbox,
   useDisclosure,
-  Button,
 } from '@chakra-ui/react';
 import MailCard from '../component/MailCard';
-import CalendarCard from '../component/CalendarCard';
 import ReadMailSection from '../component/ReadMailSection';
 import Header from '../component/Header';
 import LeftSideBar from '../component/LeftSideBar';
-import { Checkbox } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/Icons';
 import { AiOutlineMail } from 'react-icons/ai';
 import ComposeModal from '../component/ComposeModal';
 
