@@ -3,20 +3,8 @@ import { Box, Heading, Link, Text, Flex, Image } from '@chakra-ui/react';
 
 export default function TasksCard({ read = false, onToggle }) {
   return (
-    <Box bg="bg" maxW="335px" w="100%" minH="100vh">
-      <Flex py="10px" px="20px" alignItems="flex-start" justifyContent="space-between" w="330px">
-        <Box>
-          <Text fontSize="10px" color="text">
-            KEEP
-          </Text>
-          <Text fontSize="12px" fontWeight="bold" color="text">
-            My Tasks
-          </Text>
-        </Box>
-        <Box as="button" mt="5px">
-          <Image w="12px" alt="close" src="/images/close.png" />
-        </Box>
-      </Flex>
+    <Box  w="100%" h="100%">
+     
 
       <Flex
         w="100%"

@@ -2,23 +2,10 @@ import React from 'react';
 import { Box, Heading, Link, Text, Flex, Image } from '@chakra-ui/react';
 
 
-export default function CalendarCard({ read = false, onToggle }) {
+export default function CalendarCard() {
   return (
-    <Box onClick={onToggle} position="relative" bg="bg" maxW="335px" w="100%" minH="100vh">
-      <Flex py="10px" px="20px" alignItems="flex-start" justifyContent="space-between" w="330px">
-        <Box>
-          <Text fontSize="12px" color="text">
-            CALENDAR
-          </Text>
-          <Text fontSize="12px" fontWeight="bold" color="text">
-            Sat,Oct 29
-          </Text>
-        </Box>
-        <Box as="button" mt="5px">
-          <Image w="12px" alt="close" src="/images/close.png" />
-        </Box>
-      </Flex>
-
+    <Box    w="100%" h="100%">
+     
       <Flex
         w="100%"
         alignItems="center"
@@ -28,7 +15,7 @@ export default function CalendarCard({ read = false, onToggle }) {
         borderBottomWidth="1px"
         py="5px"
       >
-        <Flex px="20px" alignItems="center" justifyContent="space-between" w="330px">
+        <Flex px="20px" alignItems="center" justifyContent="space-between" w="100%">
           <Box>
             <Text fontSize="12px" color="blue">
               Today

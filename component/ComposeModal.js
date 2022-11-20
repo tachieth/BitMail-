@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import { Textarea } from "@chakra-ui/react";
 import {
   Modal,
@@ -20,10 +20,11 @@ import {
 } from "@chakra-ui/react";
 
 export default function ComposeModal({ isOpen, onClose }) {
+  const [minimized, setMinimized] = useState(false)
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal className="model-main" isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent bg="#2c2c2c">
+      <ModalContent mr="6%" mb="5px" bg="#2c2c2c">
         <ModalHeader
           borderTopLeftRadius="10px"
           borderTopRightRadius="10px"
@@ -34,12 +35,11 @@ export default function ComposeModal({ isOpen, onClose }) {
         >
           New Message
         </ModalHeader>
-        <Box position="absolute" top="20px" right="40px">
-
-        <Image src="/images/minimize.png" w="12px" alt="minimize" />
+        <Box as="button" onClick={() => setMinimized(!minimized)} position="absolute" top="20px" right="40px">
+          <Image src="/images/minimize.png" w="12px" alt="minimize" />
         </Box>
         <ModalCloseButton fontSize="5px" color="white" />
-        <ModalBody>
+       { !minimized && <ModalBody>
           <Input
             borderBottomColor="#393939"
             borderWidth="0"
@@ -61,9 +61,9 @@ export default function ComposeModal({ isOpen, onClose }) {
           <Box h="200px">
             <Textarea color="white" border="none" fontSize="10px" h="100%" />
           </Box>
-        </ModalBody>
+        </ModalBody>}
 
-        <ModalFooter>
+        { !minimized &&  <ModalFooter>
           <Flex w="100%" justifyContent="space-between">
             <Flex alignItems="center">
               <Flex
@@ -81,15 +81,31 @@ export default function ComposeModal({ isOpen, onClose }) {
               </Flex>
               <Image ml="20px" mr="10px" src="/images/A.png" w="15px" alt="A" />
               <Image mr="10px" src="/images/insert.png" w="20px" alt="insert" />
-              <Image mr="10px" src="/images/insert_.png" w="20px" alt="insert_" />
+              <Image
+                mr="10px"
+                src="/images/insert_.png"
+                w="20px"
+                alt="insert_"
+              />
               <Image mr="10px" src="/images/smile.png" w="15px" alt="smile" />
-              <Image mr="10px" src="/images/picture.png" w="15px" alt="picture" />
+              <Image
+                mr="10px"
+                src="/images/picture.png"
+                w="15px"
+                alt="picture"
+              />
               <Image mr="10px" src="/images/lock.png" w="15px" alt="lock" />
               <Image src="/images/3_dots.png" w="12px" alt="3dot" />
             </Flex>
-            <Image ml="20px" mr="10px" src="/images/trash.svg" w="25px" alt="trash" />
+            <Image
+              ml="20px"
+              mr="10px"
+              src="/images/trash.svg"
+              w="25px"
+              alt="trash"
+            />
           </Flex>
-        </ModalFooter>
+        </ModalFooter>}
       </ModalContent>
     </Modal>
   );

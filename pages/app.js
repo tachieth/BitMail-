@@ -13,21 +13,28 @@ import Header from '../component/Header';
 import LeftSideBar from '../component/LeftSideBar';
 import { AiOutlineMail } from 'react-icons/ai';
 import ComposeModal from '../component/ComposeModal';
+import RightSideBar from '../component/RightSideBar';
+import Setting from "../component/Setting";
+
+
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showRead, setShowRead] = useState(false);
+  const [showSetting, setShowSetting] = useState(false);
+
+  const [activeTab, setActiveTab] = useState(null)
   const [value, onChange] = useState(new Date());
 
   return (
-    <Flex>
+    <Flex >
       <Box>
-        <Header />
+        <Header showSetting={() => setShowSetting(!showSetting)} />
         <Flex minH="100vh" w="100%" bg="black">
           <Box px="40px" maxW="300px" bg="black">
             <LeftSideBar onOpen={onOpen} />
           </Box>
-          <Box borderRadius="15px" mb="20px" w="1000px" bg="#2c2c2c">
+          <Box borderRadius="15px" mb="20px" w="100%" bg="#2c2c2c">
             <Flex alignItems="center" justifyContent="space-between" px="25px" pt="10px">
               <Flex>
                 <Checkbox />
@@ -62,22 +69,23 @@ export default function Home() {
               </Flex>
             </Box>
           </Box>
-          <Box ml="10px">
-            <Box>
+         { showSetting && <Setting/>}
+          <Flex flexDirection="column" w="80px" ml="10px">
+            <Box as="button" onClick={() => setActiveTab("calender")}>
               <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
-            <Box>
+            <Box as="button" onClick={() => setActiveTab("tasks")}>
               <Image src="/images/Task.svg" w="35px" alt="task" />
             </Box>
-            <Box>
+            <Box as="button" onClick={() => setActiveTab("notes")}>
               <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
-          </Box>
+          </Flex>
         </Flex>
         <ComposeModal isOpen={isOpen} onClose={onClose} />
       </Box>
-
-  
+     
+     { activeTab && <RightSideBar onClose={() => setActiveTab(null)} type={activeTab}/>}
 
       {/* SideBar */}
     </Flex>
