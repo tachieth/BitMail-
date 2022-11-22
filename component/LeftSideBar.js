@@ -31,13 +31,13 @@ export default function LeftSideBar({ onOpen }) {
         </Text>
       </Flex>
       <Box mt="20px" w="180px" bg="black">
-        <Flex ml="5px" as="button"  alignItems="center">
-          <AiOutlineMail color="white" />
-          <Flex ml="15px" w="100%" justifyContent="space-between">
+        <Flex w="100%" as="button"  alignItems="center">
+        <Image src="/images/Inbox.png"  w="25px" alt="left" />
+          <Flex ml="10px"  w="100%" justifyContent="space-between">
             <Text  fontSize="14px" color="white">
               Inbox
             </Text>
-            <Text mr="10px" fontSize="14px" color="white">
+            <Text  fontSize="14px" color="white">
               1,807
             </Text>
           </Flex>

@@ -42,15 +42,17 @@ export default function Home() {
                 <Image src="/images/Refresh.svg" w="35px" alt="refresh" />
                 <Image src="/images/3 Dots Vertical.svg" w="35px" alt="3dot" />
               </Flex>
-              <Flex>
+              <Flex alignItems="center">
+              <Image src="/images/Left_arrow.png" w="25px" alt="left" />
+              <Image src="/images/Right_arrow.png" w="25px" alt="right" mr="20px" />
                 <Text fontSize="12px" color="white">
                   1-50 of 6,607
                 </Text>
               </Flex>
             </Flex>
             <Box>
-              <Flex mb="10px" alignItems="center" mt="10px" ml="25px">
-                <AiOutlineMail color="#6e39d3" />
+              <Flex mb="10px" alignItems="center" mt="10px" ml="15px">
+              <Image src="/images/Inbox.png"  w="25px" alt="left" />
                 <Text ml="10px" fontSize="12px" color="#6e39d3">
                   Inbox
                 </Text>
