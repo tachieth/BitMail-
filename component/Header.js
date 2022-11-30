@@ -22,24 +22,24 @@ export default function Header({showSetting}) {
       id="header"
       color="white"
     >
-      <Flex mr="50px" flexBasis="225px" alignItems="center" justifyContent="center">
-        <Box >
+      <Flex  mr="50px" flexBasis="225px" alignItems="center" justifyContent="center">
+        <Box display={{ base:"none", lg:"block"}} >
           <Image w="25px" alt="logo" src="/images/hamburger.png" />
         </Box>
         <Box>
-          <Image w="200px" alt="logo" src="/images/headerlogo.png" />
+          <Image w={{ base:"100px", lg:"200px"}} alt="logo" src="/images/headerlogo.png" />
         </Box>
       </Flex>
 
       <Flex
-        flexBasis="calc(100% - 275px)"
+        flexBasis={{ base:"100%", lg:"calc(100% - 275px)"}}
         alignItems="center"
         justifyContent="flex-end"
         position="relative"
       >
         <Box mr="20px" position="absolute" left="45%" sx={{ 
           transform: "translateX(-50%)"
-        }} bg="bg" w="550px">
+        }} bg="bg" w={{ base:"100%", lg:"550px"}}>
           <Input placeholder="Search" />
         </Box>
         <Box  px="10px">

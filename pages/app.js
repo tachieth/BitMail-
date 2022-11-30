@@ -31,10 +31,10 @@ export default function Home() {
       <Box>
         <Header showSetting={() => setShowSetting(!showSetting)} />
         <Flex minH="100vh" w="100%" bg="black">
-          <Box px="40px" maxW="300px" bg="black">
+          <Box display={{ base:"none", lg:"block"}} px="40px" maxW="300px" bg="black">
             <LeftSideBar onOpen={onOpen} />
           </Box>
-          <Box borderRadius="15px" mb="20px" w="100%" bg="#2c2c2c">
+          <Box borderRadius={{ base:"0", lg:"15px"}} mb="20px" w="100%" bg="#2c2c2c">
             <Flex alignItems="center" justifyContent="space-between" px="25px" pt="10px">
               <Flex>
                 <Checkbox />
@@ -72,14 +72,14 @@ export default function Home() {
             </Box>
           </Box>
          { showSetting && <Setting/>}
-          <Flex flexDirection="column" w="80px" ml="10px">
-            <Box as="button" onClick={() => setActiveTab("calender")}>
+          <Flex display={{ base:"none", lg:"flex"}} flexDirection="column" w="80px" ml="10px">
+            <Box as="button" display={{ base:"none", lg:"block"}} onClick={() => setActiveTab("calender")}>
               <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
-            <Box as="button" onClick={() => setActiveTab("tasks")}>
+            <Box as="button" display={{ base:"none", lg:"block"}} onClick={() => setActiveTab("tasks")}>
               <Image src="/images/Task.svg" w="35px" alt="task" />
             </Box>
-            <Box as="button" onClick={() => setActiveTab("notes")}>
+            <Box as="button"  display={{ base:"none", lg:"block"}} onClick={() => setActiveTab("notes")}>
               <Image src="/images/Calendar.svg" w="35px" alt="calender" />
             </Box>
           </Flex>

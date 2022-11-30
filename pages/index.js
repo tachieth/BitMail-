@@ -9,12 +9,12 @@ import {
 
 export default function Home() {
   return (
-    <Box bg="black">
+    <Box className="main-bg">
       <Box
         maxW={{ base: "auto", md: "1440px" }}
         mx="auto"
         w="100%"
-        bg="bg"
+      
         minH="100vh"
       >
         <Box
@@ -102,7 +102,7 @@ export default function Home() {
           </Box>
         </Flex>
 
-        <Box w="100%" bg="black">
+        <Box className="bg-dark" w="100%">
           <Flex
             flexDirection={{ base: "column", md: "row" }}
             py="90px"
@@ -121,6 +121,7 @@ export default function Home() {
               px={{ base: "10px", md: "0" }}
               w={{ base: "auto", md: "450px" }}
               ml="20px"
+              
             >
               <Heading
                 textAlign={{ base: "center", md: "left" }}
@@ -180,8 +181,11 @@ export default function Home() {
           </Box>
         </Flex>
 
-        <Box px={{ base: "20px", md: "0" }} py="90px" w="100%" bg="black">
-          <Box maxW="1300px" mx="auto" w="100%">
+        <Box className="bg-dark" px={{ base: "20px", md: "0" }} py="90px" w="100%">
+          <Box  maxW="1300px" mx="auto" w="100%">
+          <Heading mb="20px" fontSize="50px" color="white" textAlign="center" lineHeight="45px">
+             FAQ
+            </Heading>
             <Accordion color="white" defaultIndex={[0]} allowMultiple>
               <AccordionItem py="10px" borderWidth="0px">
                 <h2>
@@ -309,7 +313,7 @@ export default function Home() {
           id="footer"
           px="30px"
           w="100%"
-          bg="black"
+         
           py="50px"
           color="white"
         >

@@ -13,7 +13,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function LeftSideBar({ onOpen }) {
   return (
-    <Box>
+    <Box  display={{ base:"none", lg:"flex"}}>
       <Flex
         alignItems="center"
         justifyContent="center"
@@ -23,6 +23,7 @@ export default function LeftSideBar({ onOpen }) {
         borderRadius="10px"
         as="button"
         onClick={onOpen}
+       
         ml="-20px"
       >
         <Image src="/images/pencil.png" w="25px" alt="pencil" />

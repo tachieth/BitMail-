@@ -5,7 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function MailCard() {
   return (
-    <Box w="500px" borderTopWidth="1px" borderColor="#3e3e3e">
+    <Box display={{ base:"none", lg:"block"}} w="500px" borderTopWidth="1px" borderColor="#3e3e3e">
       <Flex mt="10px">
         <Flex ml="20px" alignItems="center" as="button">
           <Image src="/images/Archive.svg" w="30px" alt="archieve" />

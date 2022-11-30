@@ -3,7 +3,7 @@ import { Box, Heading, Link, Text, Flex, Image } from '@chakra-ui/react';
 
 export default function NotesCard({ read = false, onToggle }) {
   return (
-    <Box w="100%" h="100%">
+    <Box  w="100%" h="100%">
      
       <Flex
         w="100%"
