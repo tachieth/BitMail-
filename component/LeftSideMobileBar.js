@@ -1,36 +1,38 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Input,
-  Link,
-  Text,
-  Flex,
-  Image,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Radio, RadioGroup } from "@chakra-ui/react";
+import { Box, Heading, Link, Text, Flex, Stack, Image } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+  } from "@chakra-ui/react";
+  
+export default function LeftSideMobileBar({ isOpen, onClose }) {
 
-export default function LeftSideBar({ onOpen }) {
+  const [value, setValue] = React.useState("1");
+  const [secondValue, setSecondValue] = React.useState("1");
+  const [thirdValue, setThirdValue] = React.useState("1");
+  const [fourthValue, setFourthValue] = React.useState("1");
+
+    const [placement, setPlacement] = React.useState("left");
   return (
-    <Box  display={{ base:"none", lg:"block"}}>
-      <Flex
-        alignItems="center"
-        justifyContent="center"
-        bg="#8b3ad9"
-        h="50px"
-        w="150px"
-        borderRadius="10px"
-        as="button"
-        onClick={onOpen}
-       
-        ml="-20px"
-      >
-        <Image src="/images/pencil.png" w="25px" alt="pencil" />
-        <Text ml="15px" color="white">
-          Compose
-        </Text>
-      </Flex>
+    <Drawer  placement={placement} onClose={onClose} isOpen={isOpen}>
+    <DrawerOverlay />
+    <DrawerContent bg="bg">
+      <DrawerBody>
+      <Box w="100%">
+      <Box >
+          <Image
+            w="200px"
+            alt="logo"
+            src="/images/headerlogo.png"
+          />
+        </Box>
       <Box mt="20px" w="180px" bg="black">
         <Flex w="100%" as="button"  alignItems="center">
         <Image src="/images/Inbox.png"  w="25px" alt="left" />
@@ -93,5 +95,11 @@ export default function LeftSideBar({ onOpen }) {
         </Flex>
       </Box>
     </Box>
+      </DrawerBody>
+    </DrawerContent>
+  </Drawer>
+  
+  
+ 
   );
 }

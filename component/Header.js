@@ -10,10 +10,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-export default function Header({showSetting}) {
+export default function Header({ showSetting, showSideBar }) {
   return (
     <Flex
-      px="20px"
+      px={{ base: "10px", lg: "20px" }}
       alignItems="center"
       justifyContent="space-between"
       py="20px"
@@ -22,42 +22,75 @@ export default function Header({showSetting}) {
       id="header"
       color="white"
     >
-      <Flex  mr="50px" flexBasis="225px" alignItems="center" justifyContent="center">
-        <Box display={{ base:"none", lg:"block"}} >
+      <Flex
+        mr="50px"
+        display={{ base: "none", lg: "flex" }}
+        flexBasis="225px"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box >
           <Image w="25px" alt="logo" src="/images/hamburger.png" />
         </Box>
-        <Box>
-          <Image w={{ base:"100px", lg:"200px"}} alt="logo" src="/images/headerlogo.png" />
+        <Box >
+          <Image
+            w={{ base: "100px", lg: "200px" }}
+            alt="logo"
+            src="/images/headerlogo.png"
+          />
         </Box>
       </Flex>
 
       <Flex
-        flexBasis={{ base:"100%", lg:"calc(100% - 275px)"}}
+        flexBasis={{ base: "100%", lg: "calc(100% - 275px)" }}
         alignItems="center"
         justifyContent="flex-end"
         position="relative"
       >
-        <Box mr="20px" position="absolute" left="45%" sx={{ 
-          transform: "translateX(-50%)"
-        }} bg="bg" w={{ base:"100%", lg:"550px"}}>
+        <Box
+          display={{ base: "none", lg: "block" }}
+          mr="20px"
+          position="absolute"
+          left="25%"
+          sx={{
+            transform: "translateX(-50%)",
+          }}
+          bg="bg"
+          w={{ base: "100%", lg: "550px" }}
+        >
           <Input placeholder="Search" />
         </Box>
-        <Box  px="10px">
+        <Box as="button" onClick={showSideBar} mr="10px" >
+          <Image
+            w="25px"
+            alt="logo"
+            src="/images/hamburger.png"
+          />
+        </Box>
+        <Box
+          display={{ base: "block", lg: "none" }}
+          mr="20px"
+          bg="bg"
+          w="100%"
+          maxW="250px"
+        >
+          <Input placeholder="Search" />
+        </Box>
+        <Box display={{ base: "none", lg: "block" }} px="10px">
           <Image w="10px" alt="3dot" src="/images/threedotv.png" />
         </Box>
-        <Box as="button" onClick={showSetting} px="10px">
-          <Image w="25px" alt="setting" src="/images/setting.png" />
+        <Box as="button" onClick={showSetting} px={{ base: "0", lg: "10px" }}>
+          <Image w={{ base: "35px", lg: "25px" }} alt="setting" src="/images/setting.png" />
         </Box>
-        <Box  px="10px">
+        <Box px="10px">
           <Image
             borderRadius="50%"
             h="33px"
             w="33px"
-            alt="setting"
+            alt="profile"
             src="/images/1.jpg"
           />
         </Box>
-       
       </Flex>
     </Flex>
   );

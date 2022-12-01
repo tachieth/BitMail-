@@ -9,17 +9,25 @@ import {
 } from '@chakra-ui/react';
 import MailCard from '../component/MailCard';
 import ReadMailSection from '../component/ReadMailSection';
+import ReadMailMobileSection from '../component/ReadMailMobileSection';
+import {  isMobile } from 'react-device-detect';
 import Header from '../component/Header';
 import LeftSideBar from '../component/LeftSideBar';
 import { AiOutlineMail } from 'react-icons/ai';
 import ComposeModal from '../component/ComposeModal';
 import RightSideBar from '../component/RightSideBar';
 import Setting from "../component/Setting";
+import SettingMobile from "../component/SettingMobile";
+import LeftSideMobileBar from "../component/LeftSideMobileBar";
 
 
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen : isDrawerOpen , onOpen: onDrawerOpen, onClose:onDrawerClose } = useDisclosure();
+  const { isOpen : isSettingOpen , onOpen: onSettingOpen, onClose:onSettingClose } = useDisclosure();
+  const { isOpen : isLeftSideBarOpen , onOpen: onLeftSideBarOpen, onClose:onLeftSideBarClose } = useDisclosure();
+
   const [showRead, setShowRead] = useState(false);
   const [showSetting, setShowSetting] = useState(false);
 
@@ -29,7 +37,7 @@ export default function Home() {
   return (
     <Flex >
       <Box>
-        <Header showSetting={() => setShowSetting(!showSetting)} />
+        <Header showSetting={isMobile ? () => onSettingOpen() : () => setShowSetting(!showSetting)} showSideBar={onLeftSideBarOpen}  />
         <Flex minH="100vh" w="100%" bg="black">
           <Box display={{ base:"none", lg:"block"}} px="40px" maxW="300px" bg="black">
             <LeftSideBar onOpen={onOpen} />
@@ -53,25 +61,27 @@ export default function Home() {
             <Box>
               <Flex mb="10px" alignItems="center" mt="10px" ml="15px">
               <Image src="/images/Inbox.png"  w="25px" alt="left" />
-                <Text ml="10px" fontSize="12px" color="#6e39d3">
+                <Text ml="10px" fontSize="12px" color="white">
                   Inbox
                 </Text>
               </Flex>
               <Flex>
                 <Box>
-                  <MailCard onToggle={() => setShowRead(!showRead)} />
-                  <MailCard onToggle={() => setShowRead(!showRead)} read />
-                  <MailCard onToggle={() => setShowRead(!showRead)} />
-                  <MailCard onToggle={() => setShowRead(!showRead)} />
-                  <MailCard onToggle={() => setShowRead(!showRead)} read />
-                  <MailCard onToggle={() => setShowRead(!showRead)} read />
-                  <MailCard onToggle={() => setShowRead(!showRead)} />
+                  <MailCard onToggle={isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} />
+                  <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} read />
+                  <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} />
+                  <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} />
+                  <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} read />
+                  <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} read />
+                  <MailCard onToggle={isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} />
                 </Box>
                 <Box>{showRead && <ReadMailSection />}</Box>
+               <ReadMailMobileSection  isOpen={isDrawerOpen}  onClose={onDrawerClose}  />
               </Flex>
             </Box>
           </Box>
          { showSetting && <Setting/>}
+         <SettingMobile  isOpen={isSettingOpen}  onClose={onSettingClose}  />
           <Flex display={{ base:"none", lg:"flex"}} flexDirection="column" w="80px" ml="10px">
             <Box as="button" display={{ base:"none", lg:"block"}} onClick={() => setActiveTab("calender")}>
               <Image src="/images/Calendar.svg" w="35px" alt="calender" />
@@ -90,6 +100,7 @@ export default function Home() {
      { activeTab && <RightSideBar onClose={() => setActiveTab(null)} type={activeTab}/>}
 
       {/* SideBar */}
+      <LeftSideMobileBar  isOpen={isLeftSideBarOpen}  onClose={onLeftSideBarClose}  />
     </Flex>
   );
 }
