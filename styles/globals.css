@@ -43,3 +43,13 @@ justify-content: flex-end !important;
 .bg-dark {
   background: rgba(0, 0, 0, 0.5);
 }
+.chakra-accordion__item{
+border: none !important;
+
+}
+.chakra-accordion__button{
+  background: transparent !important;
+}
+.chakra-accordion__panel{
+  padding: 0 !important;
+}

@@ -10,8 +10,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
+import { useRouter } from 'next/router'
 
 export default function LeftSideBar({ onOpen }) {
+  const { push} = useRouter()
+
   return (
     <Box  display={{ base:"none", lg:"block"}}>
       <Flex
@@ -32,7 +35,7 @@ export default function LeftSideBar({ onOpen }) {
         </Text>
       </Flex>
       <Box mt="20px" w="180px" bg="black">
-        <Flex w="100%" as="button"  alignItems="center">
+        <Flex onClick={() => push("/app") } w="100%" as="button"  alignItems="center">
         <Image src="/images/Inbox.png"  w="25px" alt="left" />
           <Flex ml="10px"  w="100%" justifyContent="space-between">
             <Text  fontSize="14px" color="white">
@@ -43,13 +46,13 @@ export default function LeftSideBar({ onOpen }) {
             </Text>
           </Flex>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/sent") } as="button" >
           <Image mr="10px" src="/images/Sent.svg" w="25px" alt="sent" />
           <Text fontSize="14px" color="white">
             Sent
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/starred") } as="button" >
           <Image mr="10px" src="/images/Starred.svg" w="25px" alt="starred" />
           <Text fontSize="14px" color="white">
             Starred
@@ -61,31 +64,31 @@ export default function LeftSideBar({ onOpen }) {
             Less
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/important") } as="button" >
           <Image mr="10px" src="/images/Important.svg" w="25px" alt="imp" />
           <Text fontSize="14px" color="white">
             Important
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/archive") } as="button" >
           <Image mr="10px" src="/images/Archive.svg" w="25px" alt="archieve" />
           <Text fontSize="14px" color="white">
             Archive
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/trash") } as="button" >
           <Image mr="10px" src="/images/Trash.svg" w="25px" alt="trash" />
           <Text fontSize="14px" color="white">
             Trash
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/drafts") } as="button" >
           <Image mr="10px" src="/images/Draft.svg" w="25px" alt="draft" />
           <Text fontSize="14px" color="white">
             Drafts
           </Text>
         </Flex>
-        <Flex as="button" >
+        <Flex onClick={() => push("/spam") } as="button" >
           <Image mr="10px" src="/images/Spam.svg" w="25px" alt="spam" />
           <Text fontSize="14px" color="white">
             Spam
