@@ -74,6 +74,7 @@ export default function Home() {
                   <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} read />
                   <MailCard onToggle={ isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} read />
                   <MailCard onToggle={isMobile ? () => onDrawerOpen() : () => setShowRead(!showRead)} />
+                  
                 </Box>
                 <Box>{showRead && <ReadMailSection />}</Box>
                <ReadMailMobileSection  isOpen={isDrawerOpen}  onClose={onDrawerClose}  />

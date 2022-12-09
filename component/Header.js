@@ -29,7 +29,7 @@ export default function Header({ showSetting, showSideBar }) {
         alignItems="center"
         justifyContent="center"
       >
-        <Box >
+        <Box  >
           <Image w="25px" alt="logo" src="/images/hamburger.png" />
         </Box>
         <Box >
@@ -60,7 +60,7 @@ export default function Header({ showSetting, showSideBar }) {
         >
           <Input placeholder="Search" />
         </Box>
-        <Box as="button" onClick={showSideBar} mr="10px" >
+        <Box display={{ base: "block", lg: "none" }}  as="button" onClick={showSideBar} mr="10px" >
           <Image
             w="25px"
             alt="logo"
