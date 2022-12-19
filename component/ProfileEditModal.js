@@ -57,6 +57,32 @@ export default function ProfileEditModal({ isOpen, onClose,showProfileEdit }) {
               </Box>
             </Flex>
 
+            <Flex mt="20px" w="300px">
+              <Box py="10px" borderLeftRadius="100px" bg="black" w="125px">
+               <Text color="text" textAlign="center">
+                ethatachi
+               </Text>
+              </Box>
+              <Box ml="1px" py="10px" bg="black" w="125px">
+              <Text color="text" textAlign="center">
+                ByMail.io
+              </Text>
+              </Box>
+
+              <Box
+                ml="1px"
+                textAlign="right"
+                borderRightRadius="100px"
+                bg="black"
+                as="button"
+                w="50px"
+              >
+                <Text mr="10px" color="text">
+                  Edit
+                </Text>
+              </Box>
+            </Flex>
+
             <Text mt="20px" mb="20px" color="text">
               0x............
             </Text>
