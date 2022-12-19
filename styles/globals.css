@@ -29,10 +29,10 @@ textarea {
   resize: none !important;
 }
 
-/* .chakra-modal__content-container {
+.chakra-modal__content-container {
   align-items: flex-end !important;
   justify-content: flex-end !important;
-} */
+}
 
 .main-bg {
   background-image: url('/images/BG.png');
