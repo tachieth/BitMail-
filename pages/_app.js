@@ -6,7 +6,7 @@ import '@fontsource/roboto';
 
 const theme = extendTheme({
   colors: {
-    bg: '#42367c',
+    bgs: '#42367c',
     pink: '#31254b',
     bg: '#2c2c2c',
     text: '#787878',

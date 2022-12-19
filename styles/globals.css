@@ -29,27 +29,26 @@ textarea {
   resize: none !important;
 }
 
-.chakra-modal__content-container{
-align-items: flex-end !important;
-justify-content: flex-end !important;
-}
+/* .chakra-modal__content-container {
+  align-items: flex-end !important;
+  justify-content: flex-end !important;
+} */
 
-.main-bg{
-  background-image: url("/images/BG.png");
+.main-bg {
+  background-image: url('/images/BG.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center ;
+  background-position: center;
 }
 .bg-dark {
   background: rgba(0, 0, 0, 0.5);
 }
-.chakra-accordion__item{
-border: none !important;
-
+.chakra-accordion__item {
+  border: none !important;
 }
-.chakra-accordion__button{
+.chakra-accordion__button {
   background: transparent !important;
 }
-.chakra-accordion__panel{
+.chakra-accordion__panel {
   padding: 0 !important;
 }
