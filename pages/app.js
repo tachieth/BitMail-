@@ -1,43 +1,40 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Text,
-  Flex,
-  Image,
-  Checkbox,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Box, Text, Flex, Image, Checkbox, useDisclosure } from '@chakra-ui/react';
 import MailCard from '../component/MailCard';
 import ReadMailSection from '../component/ReadMailSection';
 import ReadMailMobileSection from '../component/ReadMailMobileSection';
-import {  isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 import Header from '../component/Header';
 import LeftSideBar from '../component/LeftSideBar';
 import { AiOutlineMail } from 'react-icons/ai';
 import ComposeModal from '../component/ComposeModal';
 import ProfileModal from '../component/ProfileModal';
+import ProfileEditModal from '../component/ProfileEditModal';
 import RightSideBar from '../component/RightSideBar';
-import Setting from "../component/Setting";
-import SettingMobile from "../component/SettingMobile";
-import LeftSideMobileBar from "../component/LeftSideMobileBar";
-
-
+import Setting from '../component/Setting';
+import SettingMobile from '../component/SettingMobile';
+import LeftSideMobileBar from '../component/LeftSideMobileBar';
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-   const {
-     isOpen: isProfileOpen,
-     onOpen: onProfileOpen,
-     onClose: onProfileClose,
-   } = useDisclosure();
-  const { isOpen : isDrawerOpen , onOpen: onDrawerOpen, onClose:onDrawerClose } = useDisclosure();
-  const { isOpen : isSettingOpen , onOpen: onSettingOpen, onClose:onSettingClose } = useDisclosure();
-  const { isOpen : isLeftSideBarOpen , onOpen: onLeftSideBarOpen, onClose:onLeftSideBarClose } = useDisclosure();
+  const { isOpen: isProfileOpen, onOpen: onProfileOpen, onClose: onProfileClose } = useDisclosure();
+  const {
+    isOpen: isProfileEditOpen,
+    onOpen: onProfileEditOpen,
+    onClose: onProfileEditClose,
+  } = useDisclosure();
+  const { isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose } = useDisclosure();
+  const { isOpen: isSettingOpen, onOpen: onSettingOpen, onClose: onSettingClose } = useDisclosure();
+  const {
+    isOpen: isLeftSideBarOpen,
+    onOpen: onLeftSideBarOpen,
+    onClose: onLeftSideBarClose,
+  } = useDisclosure();
 
   const [showRead, setShowRead] = useState(false);
   const [showSetting, setShowSetting] = useState(false);
 
-  const [activeTab, setActiveTab] = useState(null)
+  const [activeTab, setActiveTab] = useState(null);
   const [value, onChange] = useState(new Date());
 
   return (
@@ -47,6 +44,7 @@ export default function Home() {
           showSetting={isMobile ? () => onSettingOpen() : () => setShowSetting(!showSetting)}
           showSideBar={onLeftSideBarOpen}
           showProfile={onProfileOpen}
+          showProfileEdit={onProfileEditOpen}
         />
         <Flex minH="100vh" w="100%" bg="black">
           <Box display={{ base: 'none', lg: 'block' }} px="40px" maxW="300px" bg="black">
@@ -140,7 +138,12 @@ export default function Home() {
 
       {/* SideBar */}
       <LeftSideMobileBar isOpen={isLeftSideBarOpen} onClose={onLeftSideBarClose} />
-      <ProfileModal isOpen={isProfileOpen} onClose={onProfileClose} />
+      <ProfileModal
+        showProfileEdit={onProfileEditOpen}
+        isOpen={isProfileOpen}
+        onClose={onProfileClose}
+      />
+      <ProfileEditModal isOpen={isProfileEditOpen} onClose={onProfileEditClose} />
     </Flex>
   );
 }

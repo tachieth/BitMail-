@@ -5,64 +5,65 @@ import { Box, Heading, Modal,
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton, Input,Button, Link, Text, Flex, Image, useDisclosure } from '@chakra-ui/react';
+  ModalCloseButton, Input, Button, Link, Text, Flex, Image, useDisclosure
+} from '@chakra-ui/react';
+  import ProfileEditModal from './ProfileEditModal';
 
-export default function ProfileModal({ isOpen, onClose }) {
+export default function ProfileModal({ isOpen, onClose,showProfileEdit }) {
   return (
-    <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
+    <Modal overflow="hidden" size="sm" isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent borderRadius="20px" bg="bg">
-        <ModalHeader color="white" textAlign="center">
-          Customise Profile
-        </ModalHeader>
-        <ModalCloseButton color="white"/>
-        <ModalBody>
+      <ModalContent overflow="hidden" borderRadius="20px" bg="bg">
+       
+        <ModalCloseButton color="white" />
+        <ModalBody px="0px">
           <Flex w="100%" alignItems="center" justifyContent="center" flexDirection="column">
-            <Image mb="30px" w="100%" maxW="150px" alt="ppl" src="/images/ppl.png" />
+            <Image mt="10px" mb="10px" w="100%" maxW="100px" alt="ppl" src="/images/ppl.png" />
 
-            <Flex w="300px">
-              <Box w="100%">
-                <Input
-                  w="100%"
-                  borderLeftRadius="100px"
-                  bg="black"
-                  borderWidth="0px"
-                  color="white"
-                  placeholder="Name"
-                />
-              </Box>
+            <Text fontWeight="bold" color="white">
+              Tachii
+            </Text>
 
-              <Box
-                ml="1px"
-                textAlign="right"
-                borderRightRadius="100px"
-                bg="black"
-                as="button"
-                w="20%"
-              >
-                <Text mr="10px" color="text">
-                  Edit
-                </Text>
-              </Box>
-            </Flex>
-
-            <Text mt="20px" mb="20px" color="text">
+            <Text mb="10px" color="text">
               0x............
             </Text>
           </Flex>
-        </ModalBody>
 
-        <ModalFooter>
-          {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button> */}
-          {/* <Button borderRadius="20px" px="40px" bg="blue" color="white" variant="ghost">
-            Done
-          </Button> */}
-          <Box mb="10px" as="button" py="10px" borderRadius="25px" px="40px" bg="blue" color="white">
-            <Text fontWeight="bold">Done</Text>
+          <Box
+            as="button"
+            py="5px"
+            borderTopWidth="1px"
+            borderBottomWidth="1px"
+            borderColor="text"
+            w="100%"
+          >
+            <Flex as="button" onClick={showProfileEdit} ml="10px" alignItems="center">
+              <Image w="100%" maxW="50px" alt="pri" src="/images/Privacy.svg" />
+              <Box ml="20px">
+                <Text color="white" fontWeight="bold">
+                  Customise Profile
+                </Text>
+              </Box>
+            </Flex>
           </Box>
-        </ModalFooter>
+
+          <Box as="button" py="10px" borderBottomWidth="1px" borderColor="text" w="100%">
+            <Flex ml="25px" alignItems="center">
+              <Image w="100%" maxW="20px" alt="pri" src="/images/Add.png" />
+              <Box ml="40px">
+                <Text color="blue" fontWeight="bold">
+                  Add Wallet
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
+
+          <Box as="button" borderRightRadius="30px" mt="20px" mb="20px" bg="blue" w="60%" py="10px">
+            <Text textAlign="center" fontWeight="bold" color="white">
+              Disconnect
+            </Text>
+          </Box>
+        </ModalBody>
       </ModalContent>
     </Modal>
   );
