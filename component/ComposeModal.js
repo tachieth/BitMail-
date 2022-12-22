@@ -64,17 +64,18 @@ export default function ComposeModal({ isOpen, onClose }) {
         </ModalBody>}
 
         { !minimized &&  <ModalFooter>
-          <Flex w="100%" justifyContent="space-between">
-            <Flex alignItems="center">
+          <Flex as="button" w="100%" justifyContent="space-between">
+            <Flex as="button" alignItems="center">
               <Flex
                 borderRadius="5px"
                 alignItems="center"
                 bg="#7e3ad9"
                 h="30px"
+                as="button"
                 justifyContent="space-around"
                 w="80px"
               >
-                <Text ml="10px" color="white" fontSize="10px">
+                <Text  ml="10px" color="white" fontSize="10px">
                   Send
                 </Text>
                 <Image src="/images/Checkbox Tick.svg" w="15px" />

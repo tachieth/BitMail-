@@ -36,7 +36,7 @@ export default function RightSideBar({ type , onClose}) {
     }
   };
   return (
-    <Box display={{ base:"none", lg:"flex"}} position="relative" bg="bg" maxW="280px" w="100%"  >
+    <Box display={{ base:"none", lg:"block"}} position="relative" bg="bg" maxW="280px" w="100%"  >
       <Flex
         py="10px"
         px="20px"

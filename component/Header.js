@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import ProfileModal from './ProfileModal';
 
-export default function Header({ showSetting, showSideBar,showProfile }) {
+export default function Header({ showSetting,showFeedback, showSideBar,showProfile }) {
   
   return (
     <Box  w="100%">
