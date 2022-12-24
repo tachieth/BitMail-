@@ -64,7 +64,7 @@ export default function MailCard() {
         <Image mr="10px" src="/images/profile.png" w="30px" alt="profile" />
         <Flex w="420px" h="150px" flexDirection="column" justifyContent="space-between" borderWidth="1px" borderColor="#3e3e3e">
           <Flex alignItems="flex-start" mt="10px" ml="10px">
-            <Image src="/images/forward.png" w="20px" alt="forard" />
+            <Image src="/images/Forward.png" w="20px" alt="forard" />
             <Text ml="20px" fontSize="10px" color="#787878">
               tachi.eth, Jack.eth
             </Text>

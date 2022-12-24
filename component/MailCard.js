@@ -17,7 +17,7 @@ export default function MailCard({ read = false, onToggle }) {
         <Checkbox size='sm'></Checkbox>
         <Box ml="10px">
           <Flex alignItems="center">
-            <Image src="/images/Notification.png" w="12px" mr="10px" alt="notification" />
+            <Image src="/images/notification.png" w="12px" mr="10px" alt="notification" />
             <Text color="white" fontSize="10px">
               Duolingo
             </Text>
@@ -29,7 +29,7 @@ export default function MailCard({ read = false, onToggle }) {
             </Text>
           </Flex>
           <Flex alignItems="center">
-            <Image src="/images/Important.png" w="12px" mr="10px" alt="imp" />
+            <Image src="/images/important.png" w="12px" mr="10px" alt="imp" />
             <Text color="#7e7e7e" fontSize="10px">
               Make your learning 3X more effective
             </Text>

@@ -108,7 +108,7 @@ export default function ReadMailMobileSection({ isOpen, onClose }) {
                   borderColor="#3e3e3e"
                 >
                   <Flex alignItems="flex-start" mt="10px" ml="10px">
-                    <Image src="/images/forward.png" w="20px" alt="forard" />
+                    <Image src="/images/Forward.png" w="20px" alt="forard" />
                     <Text ml="20px" fontSize="10px" color="#787878">
                       tachi.eth, Jack.eth
                     </Text>
