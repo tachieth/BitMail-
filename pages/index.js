@@ -12,7 +12,7 @@ export default function Home() {
   const { push } = useRouter();
   return (
     <Box className="main-bg">
-      <Box maxW={{ base: 'auto', md: '1440px' }} mx="auto" w="100%" minH="100vh">
+      <Box minH="100vh">
         <Box
           mb="30px"
           id="header"
@@ -55,7 +55,7 @@ export default function Home() {
             alignItems={{ base: 'center', md: 'flex-start' }}
             color="white"
             textAlign={{ base: 'center', md: 'left' }}
-            w={{ base: 'auto', md: '450px' }}
+            w={{ base: 'auto', md: '500px' }}
             px={{ base: '20px', md: '0' }}
           >
             <Heading mb="20px" lineHeight="45px">
@@ -270,7 +270,15 @@ export default function Home() {
           </Box>
         </Box>
 
-        <Box id="footer" px="30px" w="100%" py="50px" color="white">
+        <Box
+          maxW={{ base: 'auto', md: '1440px' }}
+          mx="auto"
+          w="100%"
+          id="footer"
+          px="30px"
+          py="50px"
+          color="white"
+        >
           <Flex w="100%" alignItems="center" justifyContent="space-between">
             <Box>
               <Image w="200px" alt="logo" src="/images/logo.png" />
